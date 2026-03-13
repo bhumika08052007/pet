@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Pet Shop Blog</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+font-family:'Segoe UI',sans-serif;
+background:#fffafc;
+}
+
+/* HEADER */
+
+header{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:18px 60px;
+background:linear-gradient(90deg,#ff9a9e,#fad0c4);
+box-shadow:0 3px 10px rgba(0,0,0,0.1);
+}
+
+.logo{
+display:flex;
+align-items:center;
+font-size:26px;
+font-weight:bold;
+}
+
+.logo img{
+width:45px;
+margin-right:10px;
+}
+
+nav a{
+margin:18px;
+text-decoration:none;
+color:#333;
+font-weight:bold;
+}
+
+nav a:hover{
+color:#ff4d6d;
+}
+
+/* BLOG */
+
+.blog{
+padding:70px;
+text-align:center;
+}
+
+.blog h2{
+font-size:35px;
+margin-bottom:20px;
+}
+
+.blog-container{
+display:flex;
+justify-content:center;
+gap:30px;
+flex-wrap:wrap;
+margin-top:40px;
+}
+
+.blog-card{
+width:300px;
+background:white;
+border-radius:15px;
+overflow:hidden;
+box-shadow:0 5px 15px rgba(0,0,0,0.1);
+transition:0.4s;
+}
+
+.blog-card:hover{
+transform:translateY(-10px);
+}
+
+.blog-card img{
+width:100%;
+height:200px;
+object-fit:cover;
+}
+
+.blog-content{
+padding:20px;
+}
+
+.blog-content h3{
+margin-bottom:10px;
+}
+
+.blog-content button{
+padding:10px 20px;
+border:none;
+background:#ff4d6d;
+color:white;
+border-radius:25px;
+cursor:pointer;
+}
+
+.blog-content button:hover{
+background:#ff1e4d;
+}
+
+/* MODAL */
+
+.modal{
+display:none;
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.6);
+justify-content:center;
+align-items:center;
+}
+
+.modal-content{
+background:white;
+padding:30px;
+width:60%;
+border-radius:10px;
+text-align:center;
+animation:fade 0.4s;
+}
+
+@keyframes fade{
+from{transform:scale(0.7);}
+to{transform:scale(1);}
+}
+
+.close{
+background:#ff4d6d;
+color:white;
+padding:10px 20px;
+border:none;
+margin-top:20px;
+cursor:pointer;
+border-radius:20px;
+}
+
+.close:hover{
+background:#ff1e4d;
+}
+
+/* FOOTER */
+
+footer{
+background:#333;
+color:white;
+text-align:center;
+padding:25px;
+margin-top:40px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<div class="logo">
+<img src="https://cdn-icons-png.flaticon.com/512/616/616408.png">
+Pet Shop
+</div>
+
+<nav>
+<a href="index.html">Home</a>
+<a href="Portfolio.html">Portfolio</a>
+<a href="Blog.html">Blog</a>
+<a href="Shop.html">Shop</a>
+<a href="Contacts.html">Contacts</a>
+</nav>
+
+</header>
+
+<section class="blog">
+
+<h2>Pet Care Blogs & Details</h2>
+
+<div class="blog-container">
+
+<div class="blog-card">
+<img src="https://images.unsplash.com/photo-1543466835-00a7907e9de1">
+<div class="blog-content">
+<h3>Dog Care</h3>
+<button onclick="showDetails('dog')">Read More</button>
+</div>
+</div>
+
+<div class="blog-card">
+<img src="https://images.unsplash.com/photo-1518791841217-8f162f1e1131">
+<div class="blog-content">
+<h3>Cat Care</h3>
+<button onclick="showDetails('cat')">Read More</button>
+</div>
+</div>
+
+<div class="blog-card">
+<img src="https://images.unsplash.com/photo-1501706362039-c6e80948bb21">
+<div class="blog-content">
+<h3>Bird Care</h3>
+<button onclick="showDetails('bird')">Read More</button>
+</div>
+</div>
+
+<div class="blog-card">
+<img src="https://images.unsplash.com/photo-1504270997636-07ddfbd48945">
+<div class="blog-content">
+<h3>Fish Care</h3>
+<button onclick="showDetails('fish')">Read More</button>
+</div>
+</div>
+
+<div class="blog-card">
+<img src="https://images.unsplash.com/photo-1585110396000-c9ffd4e4b308">
+<div class="blog-content">
+<h3>Rabbit Care</h3>
+<button onclick="showDetails('rabbit')">Read More</button>
+</div>
+</div>
+
+<div class="blog-card">
+<img src="https://images.unsplash.com/photo-1548767797-d8c844163c4c">
+<div class="blog-content">
+<h3>Hamster Care</h3>
+<button onclick="showDetails('hamster')">Read More</button>
+</div>
+</div>
+
+</div>
+
+</section>
+
+<!-- MODAL -->
+
+<div class="modal" id="modal">
+
+<div class="modal-content">
+
+<h2 id="title"></h2>
+
+<p id="text"></p>
+
+<button class="close" onclick="closeModal()">Close</button>
+
+</div>
+
+</div>
+
+<footer>
+
+<p>© 2026 Pet Shop Website | All Rights Reserved</p>
+
+</footer>
+
+<script>
+
+function showDetails(pet){
+
+let title=document.getElementById("title");
+let text=document.getElementById("text");
+
+if(pet=="dog"){
+title.innerText="Dog Care";
+text.innerText="Dogs need daily exercise, healthy food and regular vet checkups.";
+}
+
+if(pet=="cat"){
+title.innerText="Cat Care";
+text.innerText="Cats need grooming, clean litter boxes and nutritious food.";
+}
+
+if(pet=="bird"){
+title.innerText="Bird Care";
+text.innerText="Birds require clean cages, fresh water and seeds or fruits.";
+}
+
+if(pet=="fish"){
+title.innerText="Fish Care";
+text.innerText="Fish need a clean aquarium, oxygen and proper fish food.";
+}
+
+if(pet=="rabbit"){
+title.innerText="Rabbit Care";
+text.innerText="Rabbits love vegetables, carrots and need a clean cage.";
+}
+
+if(pet=="hamster"){
+title.innerText="Hamster Care";
+text.innerText="Hamsters need a cage, exercise wheel and grains.";
+}
+
+document.getElementById("modal").style.display="flex";
+
+}
+
+function closeModal(){
+document.getElementById("modal").style.display="none";
+}
+
+</script>
+
+</body>
+</html>

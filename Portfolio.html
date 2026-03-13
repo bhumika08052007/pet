@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Pet Shop Portfolio</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Segoe UI',sans-serif;
+}
+
+body{
+background:#fffafc;
+}
+
+/* HEADER */
+
+header{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:18px 60px;
+background:linear-gradient(90deg,#ff758c,#ff7eb3);
+color:white;
+}
+
+.logo{
+display:flex;
+align-items:center;
+font-size:26px;
+font-weight:bold;
+}
+
+.logo img{
+width:40px;
+margin-right:10px;
+}
+
+nav a{
+margin:15px;
+text-decoration:none;
+color:white;
+font-weight:bold;
+transition:0.3s;
+}
+
+nav a:hover{
+color:black;
+}
+
+/* TITLE */
+
+.title{
+text-align:center;
+margin-top:40px;
+font-size:40px;
+}
+
+/* BUTTONS */
+
+.buttons{
+text-align:center;
+margin:30px;
+}
+
+.buttons button{
+padding:12px 28px;
+margin:10px;
+border:none;
+background:#ff4d6d;
+color:white;
+border-radius:25px;
+cursor:pointer;
+transition:0.3s;
+}
+
+.buttons button:hover{
+transform:scale(1.1);
+background:#ff1e4d;
+}
+
+/* GALLERY */
+
+.gallery{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+padding:50px;
+}
+
+.box{
+position:relative;
+border-radius:15px;
+overflow:hidden;
+box-shadow:0 5px 15px rgba(0,0,0,0.2);
+}
+
+.box img{
+width:100%;
+height:220px;
+object-fit:cover;
+transition:0.5s;
+}
+
+.box:hover img{
+transform:scale(1.2);
+}
+
+.overlay{
+position:absolute;
+bottom:0;
+background:rgba(0,0,0,0.6);
+color:white;
+width:100%;
+text-align:center;
+padding:10px;
+opacity:0;
+transition:0.4s;
+}
+
+.box:hover .overlay{
+opacity:1;
+}
+
+/* INFO */
+
+.info{
+padding:60px;
+background:#fff0f5;
+text-align:center;
+}
+
+.info h2{
+margin-bottom:20px;
+font-size:30px;
+}
+
+.info p{
+max-width:800px;
+margin:auto;
+font-size:18px;
+line-height:1.6;
+}
+
+/* VIDEO */
+
+.video-section{
+padding:60px;
+text-align:center;
+}
+
+.video-container{
+display:flex;
+justify-content:center;
+flex-wrap:wrap;
+gap:30px;
+margin-top:30px;
+}
+
+.video-container iframe{
+width:350px;
+height:200px;
+border-radius:15px;
+box-shadow:0 5px 15px rgba(0,0,0,0.2);
+transition:0.3s;
+}
+
+.video-container iframe:hover{
+transform:scale(1.05);
+}
+
+/* FOOTER */
+
+footer{
+background:#333;
+color:white;
+text-align:center;
+padding:20px;
+margin-top:40px;
+}
+
+</style>
+
+<script>
+
+function filterPets(category){
+
+let items=document.querySelectorAll(".box");
+
+items.forEach(function(item){
+
+if(category=="all"){
+item.style.display="block";
+}
+else if(item.classList.contains(category)){
+item.style.display="block";
+}
+else{
+item.style.display="none";
+}
+
+});
+
+}
+
+</script>
+
+</head>
+
+<body>
+
+<header>
+
+<div class="logo">
+<img src="https://cdn-icons-png.flaticon.com/512/616/616408.png">
+Pet Shop
+</div>
+
+<nav>
+<a href="index.html">Home</a>
+<a href="Portfolio.html">Portfolio</a>
+<a href="Blog.html">Blog</a>
+<a href="Shop.html">Shop</a>
+<a href="Contacts.html">Contacts</a>
+</nav>
+
+</header>
+
+<h1 class="title">Our Pet Gallery 🐾</h1>
+
+<div class="buttons">
+
+<button onclick="filterPets('all')">All</button>
+<button onclick="filterPets('dog')">Dogs</button>
+<button onclick="filterPets('cat')">Cats</button>
+<button onclick="filterPets('bird')">Birds</button>
+
+</div>
+
+<div class="gallery">
+
+<!-- DOG -->
+
+<div class="box dog">
+<img src="https://images.unsplash.com/photo-1517849845537-4d257902454a">
+<div class="overlay">Happy Dog</div>
+</div>
+
+<div class="box dog">
+<img src="https://images.unsplash.com/photo-1548199973-03cce0bbc87b">
+<div class="overlay">Cute Puppy</div>
+</div>
+
+<div class="box dog">
+<img src="https://images.unsplash.com/photo-1583337130417-3346a1be7dee">
+<div class="overlay">Playing Dog</div>
+</div>
+
+<!-- CAT -->
+
+<div class="box cat">
+<img src="https://images.unsplash.com/photo-1518791841217-8f162f1e1131">
+<div class="overlay">Cute Cat</div>
+</div>
+
+<div class="box cat">
+<img src="https://images.unsplash.com/photo-1574158622682-e40e69881006">
+<div class="overlay">Lovely Cat</div>
+</div>
+
+<div class="box cat">
+<img src="https://images.unsplash.com/photo-1595433562696-8c7c8c5ad788">
+<div class="overlay">Sleeping Cat</div>
+</div>
+
+<!-- BIRD -->
+
+<div class="box bird">
+<img src="https://images.unsplash.com/photo-1526336024174-e58f5cdd8e13">
+<div class="overlay">Colorful Bird</div>
+</div>
+
+<div class="box bird">
+<img src="https://images.unsplash.com/photo-1501706362039-c6e80948bbad">
+<div class="overlay">Pet Bird</div>
+</div>
+
+<div class="box bird">
+<img src="https://images.unsplash.com/photo-1552728089-57bdde30beb3">
+<div class="overlay">Flying Bird</div>
+</div>
+
+</div>
+
+<!-- ABOUT -->
+
+<section class="info">
+
+<h2>About Our Pets</h2>
+
+<p>
+Pets bring happiness and love into our lives. Dogs are loyal and playful companions who love spending time with their owners. Cats are calm, cute, and independent pets that enjoy relaxing and exploring. Birds are colorful and intelligent animals that fill our homes with beautiful sounds and joy.
+</p>
+
+</section>
+
+<!-- VIDEOS -->
+
+<section class="video-section">
+
+<h2>Cute Pet Videos 🐾</h2>
+
+<div class="video-container">
+
+<iframe src="https://www.youtube.com/embed/j5a0jTc9S10" allowfullscreen></iframe>
+
+<iframe src="https://www.youtube.com/embed/tntOCGkgt98" allowfullscreen></iframe>
+
+<iframe src="https://www.youtube.com/embed/0V8sC1kGqB4" allowfullscreen></iframe>
+
+</div>
+
+</section>
+
+<footer>
+
+<p>© 2026 Pet Shop Portfolio</p>
+
+</footer>
+
+</body>
+</html>

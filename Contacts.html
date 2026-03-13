@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Pet Shop - Contact</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+font-family:'Segoe UI',sans-serif;
+background:#fffafc;
+}
+
+/* HEADER */
+
+header{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:18px 60px;
+background:linear-gradient(90deg,#ff9a9e,#fad0c4);
+box-shadow:0 3px 10px rgba(0,0,0,0.1);
+}
+
+.logo{
+display:flex;
+align-items:center;
+font-size:26px;
+font-weight:bold;
+}
+
+.logo img{
+width:45px;
+margin-right:10px;
+}
+
+nav a{
+margin:18px;
+text-decoration:none;
+color:#333;
+font-weight:bold;
+}
+
+nav a:hover{
+color:#ff4d6d;
+}
+
+/* CONTACT */
+
+.contact{
+padding:70px;
+text-align:center;
+}
+
+.contact h2{
+margin-bottom:30px;
+}
+
+.contact-container{
+display:flex;
+justify-content:center;
+gap:40px;
+flex-wrap:wrap;
+}
+
+/* FORM */
+
+form{
+background:white;
+padding:30px;
+border-radius:15px;
+box-shadow:0 5px 15px rgba(0,0,0,0.1);
+width:350px;
+}
+
+input, textarea{
+width:100%;
+padding:12px;
+margin:10px 0;
+border-radius:8px;
+border:1px solid #ccc;
+}
+
+button{
+padding:12px 20px;
+border:none;
+background:#ff4d6d;
+color:white;
+border-radius:25px;
+cursor:pointer;
+font-size:16px;
+}
+
+button:hover{
+background:#ff1e4d;
+}
+
+/* INFO */
+
+.contact-info{
+width:300px;
+text-align:left;
+}
+
+.contact-info h3{
+margin-bottom:10px;
+}
+
+/* MAP */
+
+.map{
+margin-top:50px;
+text-align:center;
+}
+
+iframe{
+width:80%;
+height:300px;
+border-radius:10px;
+}
+
+/* FOOTER */
+
+footer{
+background:#333;
+color:white;
+text-align:center;
+padding:25px;
+margin-top:40px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<div class="logo">
+<img src="https://cdn-icons-png.flaticon.com/512/616/616408.png">
+Pet Shop
+</div>
+
+<nav>
+<a href="index.html">Home</a>
+<a href="Portfolio.html">Portfolio</a>
+<a href="Blog.html">Blog</a>
+<a href="Shop.html">Shop</a>
+<a href="Contacts.html">Contacts</a>
+</nav>
+
+</header>
+
+<section class="contact">
+
+<h2>Contact Us</h2>
+
+<div class="contact-container">
+
+<form>
+
+<input type="text" placeholder="Your Name" required>
+
+<input type="email" placeholder="Your Email" required>
+
+<textarea rows="5" placeholder="Your Message"></textarea>
+
+<button type="submit">Send Message</button>
+
+</form>
+
+<div class="contact-info">
+
+<h3>Pet Shop</h3>
+
+<p>📍 Address: Ahmedabad, India</p>
+
+<p>📞 Phone: +91 9876543210</p>
+
+<p>📧 Email: petshop@gmail.com</p>
+
+<p>🐾 We love pets and care for them!</p>
+
+</div>
+
+</div>
+
+</section>
+
+<div class="map">
+
+<h2>Our Location</h2>
+
+<iframe src="https://maps.google.com/maps?q=Ahmedabad&t=&z=13&ie=UTF8&iwloc=&output=embed"></iframe>
+
+</div>
+
+<footer>
+
+<p>© 2026 Pet Shop Website | All Rights Reserved</p>
+
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Dog Food Products</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+font-family:'Segoe UI',sans-serif;
+background:#fffafc;
+}
+
+/* HEADER */
+
+header{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:18px 60px;
+background:linear-gradient(90deg,#ff9a9e,#fad0c4);
+}
+
+.logo{
+font-size:26px;
+font-weight:bold;
+}
+
+nav a{
+margin:15px;
+text-decoration:none;
+color:#333;
+font-weight:bold;
+}
+
+nav a:hover{
+color:#ff4d6d;
+}
+
+/* TITLE */
+
+.title{
+text-align:center;
+font-size:35px;
+margin-top:40px;
+}
+
+/* PRODUCT SECTION */
+
+.container{
+padding:50px;
+}
+
+.product-container{
+display:flex;
+justify-content:center;
+gap:30px;
+flex-wrap:wrap;
+}
+
+/* CARD */
+
+.card{
+width:250px;
+background:white;
+border-radius:15px;
+overflow:hidden;
+box-shadow:0 5px 15px rgba(0,0,0,0.1);
+transition:0.4s;
+text-align:center;
+}
+
+.card:hover{
+transform:translateY(-10px);
+box-shadow:0 10px 25px rgba(0,0,0,0.2);
+}
+
+.card img{
+width:100%;
+height:200px;
+object-fit:cover;
+}
+
+.card h3{
+margin:10px;
+}
+
+.price{
+color:#ff4d6d;
+font-size:18px;
+font-weight:bold;
+}
+
+/* BUTTON */
+
+button{
+margin:15px;
+padding:10px 25px;
+border:none;
+background:#ff4d6d;
+color:white;
+border-radius:25px;
+cursor:pointer;
+font-size:15px;
+}
+
+button:hover{
+background:#ff1e4d;
+}
+
+/* FOOTER */
+
+footer{
+background:#333;
+color:white;
+text-align:center;
+padding:20px;
+margin-top:40px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<div class="logo">Pet Shop 🐾</div>
+
+<nav>
+<a href="index.html">Home</a>
+<a href="Shop.html">Shop</a>
+<a href="Contacts.html">Contact</a>
+</nav>
+
+</header>
+
+<h1 class="title">Dog Food Products 🐶</h1>
+
+<div class="container">
+
+<div class="product-container">
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1601758125946-6ec2ef64daf8">
+<h3>Pedigree Dog Food</h3>
+<p class="price">₹500</p>
+<button>Buy Now</button>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1558944351-cf5c4d8f3a0a">
+<h3>Drools Dog Food</h3>
+<p class="price">₹450</p>
+<button>Buy Now</button>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1598137264879-9b1c42c7f2fa">
+<h3>Royal Canin Dog Food</h3>
+<p class="price">₹900</p>
+<button>Buy Now</button>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1601758173928-5f9b0c7a1b1f">
+<h3>Grain Free Dog Food</h3>
+<p class="price">₹700</p>
+<button>Buy Now</button>
+</div>
+
+</div>
+
+</div>
+
+<footer>
+
+<p>© 2026 Pet Shop Website | All Rights Reserved</p>
+
+</footer>
+
+</body>
+</html>
