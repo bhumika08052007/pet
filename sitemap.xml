@@ -2,12 +2,17 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
-<loc>https://yourusername.github.io/pet-shop/</loc>
+<loc>https://bhumika08052007.github.io/pet/</loc>
 <priority>1.0</priority>
 </url>
 
 <url>
-<loc>https://yourusername.github.io/pet-shop/Shop.html</loc>
+<loc>https://bhumika08052007.github.io/pet/index.html</loc>
+<priority>0.9</priority>
+</url>
+
+<url>
+<loc>https://bhumika08052007.github.io/pet/Shop.html</loc>
 <priority>0.8</priority>
 </url>
 
