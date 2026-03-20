@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://yourusername.github.io/pet-shop/sitemap.xml
+Sitemap: https://bhumika08052007.github.io/pet/sitemap.xml
